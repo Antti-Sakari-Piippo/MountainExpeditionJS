@@ -81,6 +81,14 @@ h4 {
     text-align: center;
     font-weight: 200;
 }
+p.picture-by {
+    top: 0;
+    position: absolute;
+    font-size: 0.8rem;
+    color: white;
+    padding-left: var(--space-100);
+    padding-top: var(--space-100);
+}
 p {
     color: var(--clr-dark);
     font-size: 1.3rem;
@@ -259,6 +267,7 @@ section.read-more {
 }
 ////////// Full-width-img
 section.full-width-img {
+    position: relative;
     img {
         height: 1000px;
         width: 100%;
@@ -267,6 +276,7 @@ section.full-width-img {
 }
 ////////// Subscribe
 section.subscribe {
+    position: relative;
     background-image: url(images/pexels-federico-tomasoni-11855042.jpg);
     height: 1084px;
     width: 100%;
@@ -274,6 +284,7 @@ section.subscribe {
     padding-top: 7rem;
     background-position: center top -18rem;
     background-repeat: no-repeat;
+
     .subscribe__holder {
         display: grid;
         place-content: center;
