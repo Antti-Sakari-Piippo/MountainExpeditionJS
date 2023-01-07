@@ -52,8 +52,6 @@ section {
 h2 {
     color: var(--clr-secondary-strong);
     font-size: 5.625rem;
-    // font-size: 3.5vw;
-
     text-align: center;
 }
 h3.italic {
@@ -133,9 +131,6 @@ button:active {
     margin-bottom: var(--space-300);
 }
 
-.btn {
-}
-
 .btn-primary {
     background-color: var(--clr-primary);
 }
@@ -174,43 +169,37 @@ section.hero {
         }
     }
     .hero__bg {
+        position: relative;
         background-image: url(/images/pexels-pixabay-417173.jpg);
-        height: 1300px;
-        height: calc(800px + 40vw);
+        height: 81.25rem;
+        height: calc(50rem + 40vw);
         width: 100%;
         display: flex;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top -10rem;
-        position: relative;
         h1 {
             position: absolute;
             color: white;
             font-size: 9vw;
             top: 37%;
-            // justify-content: center;
-            // align-items: center;
-            // display: flex;
             width: 100%;
             height: 100%;
             text-align: center;
-            // top: -60px;
         }
     }
 }
 ////////// Exploration
 section.exploration {
+    position: relative;
     width: 100%;
     gap: 7vw;
-    min-height: 1000px;
+    min-height: 62.5rem;
     text-align: center;
     margin-bottom: var(--space-500);
     margin-top: 0;
     justify-content: center;
     flex-wrap: wrap-reverse;
-
-    position: relative;
-    // margin: 8rem auto;
     img {
         margin: 0 auto var(--space-300) auto;
         margin: 0;
@@ -269,7 +258,7 @@ section.read-more {
 section.full-width-img {
     position: relative;
     img {
-        height: 1000px;
+        height: 62.5rem;
         width: 100%;
         object-fit: cover;
     }
@@ -278,7 +267,7 @@ section.full-width-img {
 section.subscribe {
     position: relative;
     background-image: url(images/pexels-federico-tomasoni-11855042.jpg);
-    height: 1084px;
+    height: 67.75rem;
     width: 100%;
     background-size: cover;
     padding-top: 7rem;
@@ -343,7 +332,7 @@ section.experience {
 }
 ////////// Pre-footer
 section.pre-footer {
-    height: 984px;
+    height: 61.5rem;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center top -34.375rem;
@@ -378,10 +367,6 @@ section.footer {
         margin-bottom: var(--space-100);
     }
     .footer__container {
-        .flex-item {
-        }
-        .flex-item.legal {
-        }
         .footer__container__item.flex {
             display: flex;
             flex-wrap: wrap;
@@ -402,21 +387,19 @@ section.footer {
     .flex-item.navigate {
         margin-top: 1rem;
         .footer__container {
-            .footer__container__item {
-            }
         }
     }
 }
 
-@media only screen and (max-width: 2322px) {
+@media only screen and (max-width: 145.125em) {
     section.pre-footer {
-        height: 884px;
+        height: 55.25rem;
         background-position: center top -16rem;
         // background-size: contain;
     }
 }
 
-@media only screen and (max-width: 1860px) {
+@media only screen and (max-width: 116.25em) {
     section.pre-footer {
         background-position: center top 0rem;
         // background-size: contain;

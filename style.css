@@ -176,15 +176,15 @@ section.hero nav ul li a:hover {
   color: rgb(210, 210, 210);
 }
 section.hero .hero__bg {
+  position: relative;
   background-image: url(/images/pexels-pixabay-417173.jpg);
-  height: 1300px;
-  height: calc(800px + 40vw);
+  height: 81.25rem;
+  height: calc(50rem + 40vw);
   width: 100%;
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top -10rem;
-  position: relative;
 }
 section.hero .hero__bg h1 {
   position: absolute;
@@ -197,15 +197,15 @@ section.hero .hero__bg h1 {
 }
 
 section.exploration {
+  position: relative;
   width: 100%;
   gap: 7vw;
-  min-height: 1000px;
+  min-height: 62.5rem;
   text-align: center;
   margin-bottom: var(--space-500);
   margin-top: 0;
   justify-content: center;
   flex-wrap: wrap-reverse;
-  position: relative;
 }
 section.exploration img {
   margin: 0 auto var(--space-300) auto;
@@ -261,7 +261,7 @@ section.full-width-img {
   position: relative;
 }
 section.full-width-img img {
-  height: 1000px;
+  height: 62.5rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -270,7 +270,7 @@ section.full-width-img img {
 section.subscribe {
   position: relative;
   background-image: url(images/pexels-federico-tomasoni-11855042.jpg);
-  height: 1084px;
+  height: 67.75rem;
   width: 100%;
   background-size: cover;
   padding-top: 7rem;
@@ -334,7 +334,7 @@ section.experience .experience__texts button {
 }
 
 section.pre-footer {
-  height: 984px;
+  height: 61.5rem;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center top -34.375rem;
@@ -386,13 +386,13 @@ section.footer .flex-item.social .footer__container__item p {
 section.footer .flex-item.navigate {
   margin-top: 1rem;
 }
-@media only screen and (max-width: 2322px) {
+@media only screen and (max-width: 145.125em) {
   section.pre-footer {
-    height: 884px;
+    height: 55.25rem;
     background-position: center top -16rem;
   }
 }
-@media only screen and (max-width: 1860px) {
+@media only screen and (max-width: 116.25em) {
   section.pre-footer {
     background-position: center top 0rem;
   }
