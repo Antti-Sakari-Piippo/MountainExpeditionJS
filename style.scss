@@ -89,6 +89,7 @@ p {
     font-size: 1.3rem;
     margin-bottom: $space-200;
     text-align: center;
+    max-width: 30ch;
 }
 p,
 a,
@@ -99,22 +100,31 @@ a {
     letter-spacing: 0.1rem;
 }
 
-button,
-button:focus {
-    outline: none;
-    background: transparent;
+button:not(.hamburger),
+button:not(.hamburger):focus {
+    // outline: none;
+    // background: transparent;
     border: 1px solid transparent;
     border-radius: 1.6rem;
     padding: 0.75em 1.4em;
     color: white;
     display: inline-block;
     margin-top: $space-200;
+    transition-duration: 0.15s;
+}
+
+button:hover,
+input[type='button']:hover {
+    cursor: pointer;
+    scale: 1.04;
 }
 
 button:active {
     outline: none;
-    background: transparent;
-    border: 1px solid $clr-dark;
+    // background: transparent;
+    z-index: 99999;
+    // border: 1px solid $clr-dark;
+    scale: 1.1;
 }
 
 .flex {
@@ -169,6 +179,7 @@ section.hero {
         position: relative;
         background-image: url(/images/pexels-pixabay-417173.jpg);
         height: calc(50rem + 40vw);
+        height: calc(32rem + 40vw);
         width: 100%;
         display: flex;
         background-size: cover;
@@ -191,11 +202,13 @@ section.exploration {
     width: 100%;
     gap: 7vw;
     min-height: 62.5rem;
+    margin-top: 4rem;
     text-align: center;
     margin-bottom: $space-500;
     margin-top: 0;
     justify-content: center;
     flex-wrap: wrap-reverse;
+    padding-inline: $space-100;
     img {
         margin: 0 auto $space-300 auto;
         margin: 0;
@@ -219,7 +232,7 @@ section.exploration {
         p {
             margin: auto;
             margin-bottom: $space-200;
-            max-width: 60ch;
+            max-width: 45ch;
         }
         button {
             margin: auto;
@@ -261,15 +274,15 @@ section.full-width-img {
 }
 ////////// Subscribe
 section.subscribe {
-    position: relative;
     background-image: url(images/pexels-federico-tomasoni-11855042.jpg);
+    position: relative;
     height: 67.75rem;
     width: 100%;
     background-size: cover;
     padding-top: 7rem;
     background-position: center top -18rem;
     background-repeat: no-repeat;
-
+    padding-inline: $space-100;
     .subscribe__holder {
         display: grid;
         place-content: center;
@@ -299,9 +312,10 @@ section.book-trip {
     .flex {
         justify-content: center;
         .flex-item {
-            width: 20%;
+            max-width: 30ch;
             h4 {
                 color: $clr-secondary-strong;
+                white-space: nowrap;
             }
             p {
                 color: $clr-secondary-strong;
@@ -402,5 +416,63 @@ section.footer {
     }
     section.experience .experience__texts {
         margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .book-trip h2 {
+        font-size: 3.6rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: calc(13vw + 1rem) !important;
+    }
+    h2 {
+        font-size: 3.3rem !important;
+    }
+    h4 {
+        font-size: 1.6rem;
+    }
+}
+
+//////////Menu
+.hamburger {
+    display: none;
+}
+
+.menu ul a {
+    display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 3rem;
+        background-color: unset;
+        color: white;
+        border: none;
+        font-size: 3.5rem;
+    }
+    .menu ul a {
+        display: none;
+    }
+    .menu.open ul a {
+        display: block;
+    }
+
+    .menu.open ul {
+        display: flex;
+        flex-direction: column !important;
+        text-align: right;
+        background-color: rgba($color: #81cdfe, $alpha: 0.9);
+        position: absolute;
+        top: -3rem;
+        right: -3rem;
+        padding: 3rem;
+        border-radius: 0 0.5rem 0 0.5rem;
+        padding-top: 9rem;
+        backdrop-filter: blur(3px);
     }
 }

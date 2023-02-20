@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,17 +17,32 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <section class="hero">
-      <nav>
+      <nav class="menu" aria-labelledby="menu-label" id="nav">
         <ul>
           <li><a href="#">Guides</a></li>
           <li><a href="#">Prices</a></li>
           <li><a href="#">Membership</a></li>
-          <li><a href="">News</a></li>
+          <li><a href="#">News</a></li>
         </ul>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-labelledby="hamburger"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <!-- <input
+          type="checkbox"
+          id="menu"
+          class="menu-checkbox"
+          checked="false"
+        /> -->
       </nav>
       <div class="hero__bg" alt="">
         <h1>Mountain Expedition</h1>
@@ -55,31 +69,31 @@
     </section>
     <section class="read-more flex">
       <div class="flex-item">
-        <h4>Travel quides</h4>
+        <h4>Travel Guides</h4>
         <img src="/images/fa-solid_hiking.png" alt="hiking icon" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
           purus sit amet luctus venenatis
         </p>
-        <a href="">read more</a>
+        <a href="">Read More</a>
       </div>
       <div class="flex-item">
-        <h4>Hikes routes</h4>
+        <h4>Hike Routes</h4>
         <img src="/images/VectorMap.png" alt="hiking icon" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
           purus sit amet luctus venenatis
         </p>
-        <a href="">read more</a>
+        <a href="">Read More</a>
       </div>
       <div class="flex-item">
-        <h4>Travel quides</h4>
+        <h4>Travel Guides</h4>
         <img src="/images/VectorMountain.png" alt="hiking icon" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
           purus sit amet luctus venenatis
         </p>
-        <a href="">read more</a>
+        <a href="">Read More</a>
       </div>
     </section>
     <section class="full-width-img">
@@ -130,7 +144,7 @@
         </h4>
         <div class="buttons flex">
           <button class="btn-third">Book a trip</button>
-          <button class="btn-third">subscribe</button>
+          <button class="btn-third">Subscribe</button>
         </div>
       </div>
     </section>

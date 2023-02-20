@@ -79,6 +79,7 @@ p {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  max-width: 30ch;
 }
 
 p,
@@ -91,22 +92,27 @@ a {
   letter-spacing: 0.1rem;
 }
 
-button,
-button:focus {
-  outline: none;
-  background: transparent;
+button:not(.hamburger),
+button:not(.hamburger):focus {
   border: 1px solid transparent;
   border-radius: 1.6rem;
   padding: 0.75em 1.4em;
   color: white;
   display: inline-block;
   margin-top: 1.5rem;
+  transition-duration: 0.15s;
+}
+
+button:hover,
+input[type=button]:hover {
+  cursor: pointer;
+  scale: 1.04;
 }
 
 button:active {
   outline: none;
-  background: transparent;
-  border: 1px solid #584149;
+  z-index: 99999;
+  scale: 1.1;
 }
 
 .flex {
@@ -161,6 +167,7 @@ section.hero .hero__bg {
   position: relative;
   background-image: url(/images/pexels-pixabay-417173.jpg);
   height: calc(50rem + 40vw);
+  height: calc(32rem + 40vw);
   width: 100%;
   display: flex;
   background-size: cover;
@@ -182,11 +189,13 @@ section.exploration {
   width: 100%;
   gap: 7vw;
   min-height: 62.5rem;
+  margin-top: 4rem;
   text-align: center;
   margin-bottom: 10rem;
   margin-top: 0;
   justify-content: center;
   flex-wrap: wrap-reverse;
+  padding-inline: 0.7rem;
 }
 section.exploration img {
   margin: 0 auto 2.5rem auto;
@@ -211,7 +220,7 @@ section.exploration .exploration__texts h4.italic {
 section.exploration .exploration__texts p {
   margin: auto;
   margin-bottom: 1.5rem;
-  max-width: 60ch;
+  max-width: 45ch;
 }
 section.exploration .exploration__texts button {
   margin: auto;
@@ -249,14 +258,15 @@ section.full-width-img img {
 }
 
 section.subscribe {
-  position: relative;
   background-image: url(images/pexels-federico-tomasoni-11855042.jpg);
+  position: relative;
   height: 67.75rem;
   width: 100%;
   background-size: cover;
   padding-top: 7rem;
   background-position: center top -18rem;
   background-repeat: no-repeat;
+  padding-inline: 0.7rem;
 }
 section.subscribe .subscribe__holder {
   display: grid;
@@ -288,10 +298,11 @@ section.book-trip .flex {
   justify-content: center;
 }
 section.book-trip .flex .flex-item {
-  width: 20%;
+  max-width: 30ch;
 }
 section.book-trip .flex .flex-item h4 {
   color: #8d6876;
+  white-space: nowrap;
 }
 section.book-trip .flex .flex-item p {
   color: #8d6876;
@@ -383,5 +394,60 @@ section.footer .flex-item.navigate {
   }
   section.experience .experience__texts {
     margin-top: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .book-trip h2 {
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: calc(13vw + 1rem) !important;
+  }
+  h2 {
+    font-size: 3.3rem !important;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+}
+.hamburger {
+  display: none;
+}
+
+.menu ul a {
+  display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 3rem;
+    background-color: unset;
+    color: white;
+    border: none;
+    font-size: 3.5rem;
+  }
+  .menu ul a {
+    display: none;
+  }
+  .menu.open ul a {
+    display: block;
+  }
+  .menu.open ul {
+    display: flex;
+    flex-direction: column !important;
+    text-align: right;
+    background-color: rgba(129, 205, 254, 0.9);
+    position: absolute;
+    top: -3rem;
+    right: -3rem;
+    padding: 3rem;
+    border-radius: 0 0.5rem 0 0.5rem;
+    padding-top: 9rem;
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
   }
 }/*# sourceMappingURL=style.css.map */
