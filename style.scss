@@ -39,7 +39,6 @@ h4 {
 }
 
 h1 {
-    font-size: 12rem;
     text-align: center;
 }
 section {
@@ -91,6 +90,7 @@ p {
     text-align: center;
     max-width: 30ch;
 }
+
 p,
 a,
 button {
@@ -102,8 +102,6 @@ a {
 
 button:not(.hamburger),
 button:not(.hamburger):focus {
-    // outline: none;
-    // background: transparent;
     border: 1px solid transparent;
     border-radius: 1.6rem;
     padding: 0.75em 1.4em;
@@ -121,9 +119,7 @@ input[type='button']:hover {
 
 button:active {
     outline: none;
-    // background: transparent;
     z-index: 99999;
-    // border: 1px solid $clr-dark;
     scale: 1.1;
 }
 
@@ -178,7 +174,6 @@ section.hero {
     .hero__bg {
         position: relative;
         background-image: url(/images/pexels-pixabay-417173.jpg);
-        height: calc(50rem + 40vw);
         height: calc(32rem + 40vw);
         width: 100%;
         display: flex;
@@ -188,7 +183,7 @@ section.hero {
         h1 {
             position: absolute;
             color: white;
-            font-size: 9vw;
+            font-size: calc(8vw + 1rem);
             top: 37%;
             width: 100%;
             height: 100%;
@@ -359,10 +354,10 @@ section.footer {
     margin-bottom: 0;
     margin-top: 0;
     padding: $space-500-vw;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     text-align: left;
-    gap: 5vw;
+    gap: $space-40;
     h4,
     h3,
     p {
@@ -380,7 +375,7 @@ section.footer {
         .footer__container__item.flex {
             display: flex;
             flex-wrap: wrap;
-            gap: $space-200;
+            gap: $space-300;
         }
     }
     .flex-item.social {
@@ -436,6 +431,12 @@ section.footer {
     }
 }
 
+@media only screen and (max-width: 1400px) {
+    section.footer {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
 //////////Menu
 .hamburger {
     display: none;
@@ -449,7 +450,7 @@ section.footer {
     .hamburger {
         display: block;
         position: absolute;
-        right: 3rem;
+        right: $space-40;
         background-color: unset;
         color: white;
         border: none;
@@ -474,5 +475,8 @@ section.footer {
         border-radius: 0 0.5rem 0 0.5rem;
         padding-top: 9rem;
         backdrop-filter: blur(3px);
+    }
+    body section.footer {
+        grid-template-columns: 1fr !important;
     }
 }
