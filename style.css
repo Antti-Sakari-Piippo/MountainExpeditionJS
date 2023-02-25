@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Kaisei Opti", serif;
+  font-family: 'Kaisei Opti', serif;
 }
 
 img {
@@ -39,7 +39,7 @@ h3.italic {
   color: #c07958;
   font-size: 3.5rem;
   text-align: center;
-  font-family: "Dancing Script", cursive;
+  font-family: 'Dancing Script', cursive;
 }
 
 h3 {
@@ -54,7 +54,7 @@ h2.italic {
 }
 
 .italic {
-  font-family: "Dancing Script", cursive;
+  font-family: 'Dancing Script', cursive;
 }
 
 h4 {
@@ -104,7 +104,7 @@ button:not(.hamburger):focus {
 }
 
 button:hover,
-input[type=button]:hover {
+input[type='button']:hover {
   cursor: pointer;
   scale: 1.04;
 }
@@ -165,7 +165,7 @@ section.hero nav ul li a:hover {
 }
 section.hero .hero__bg {
   position: relative;
-  background-image: url(/images/pexels-pixabay-417173.jpg);
+  background-image: url(images/pexels-pixabay-417173.jpg);
   height: calc(50rem + 40vw);
   height: calc(32rem + 40vw);
   width: 100%;
@@ -254,7 +254,7 @@ section.full-width-img img {
   height: 62.5rem;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 section.subscribe {
@@ -370,7 +370,7 @@ section.footer .flex-item.social {
 }
 section.footer .flex-item.social .footer__container__item img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section.footer .flex-item.social .footer__container__item p {
   margin-top: 0.4rem;
@@ -448,7 +448,7 @@ section.footer .flex-item.navigate {
     border-radius: 0 0.5rem 0 0.5rem;
     padding-top: 9rem;
     -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
   }
   body section.footer {
     grid-template-columns: 1fr !important;
@@ -458,4 +458,4 @@ section.footer .flex-item.navigate {
   section.footer {
     grid-template-columns: 1fr 1fr !important;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
