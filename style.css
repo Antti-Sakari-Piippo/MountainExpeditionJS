@@ -394,12 +394,12 @@ section.footer .flex-item.navigate {
     margin-top: 0;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 31.25rem) {
   .book-trip h2 {
     font-size: 3.6rem;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 50rem) {
   h1 {
     font-size: calc(13vw + 1rem) !important;
   }
@@ -410,7 +410,7 @@ section.footer .flex-item.navigate {
     font-size: 1.6rem;
   }
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 87.5rem) {
   section.footer {
     grid-template-columns: 1fr 1fr !important;
   }
@@ -423,7 +423,7 @@ section.footer .flex-item.navigate {
   display: block;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 62.5rem) {
   .hamburger {
     display: block;
     position: absolute;
