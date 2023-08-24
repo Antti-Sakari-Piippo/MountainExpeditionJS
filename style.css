@@ -89,6 +89,9 @@ button {
 
 a {
   letter-spacing: 0.1rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 button:not(.hamburger),
@@ -123,6 +126,17 @@ button:active {
 .italic {
   font-style: italic;
   margin-bottom: 2.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .btn-primary {
@@ -347,11 +361,14 @@ section.footer {
 }
 section.footer h4,
 section.footer h3,
+section.footer a,
 section.footer p {
   color: white;
   text-align: left;
   margin-bottom: 1.5rem;
+  display: block;
 }
+section.footer a,
 section.footer p {
   margin-bottom: 0.7rem;
 }
@@ -370,7 +387,8 @@ section.footer .flex-item.social .footer__container__item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.footer .flex-item.social .footer__container__item p {
+section.footer .flex-item.social .footer__container__item p,
+section.footer .flex-item.social .footer__container__item a {
   margin-top: 0.4rem;
 }
 section.footer .flex-item.navigate {
@@ -380,7 +398,7 @@ section.footer .flex-item.navigate {
 @media only screen and (max-width: 145.125em) {
   section.pre-footer {
     height: 55.25rem;
-    background-position: center top -16rem;
+    background-position: 0;
   }
 }
 @media only screen and (max-width: 116.25em) {

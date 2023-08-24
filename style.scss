@@ -98,6 +98,9 @@ button {
 }
 a {
     letter-spacing: 0.1rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 button:not(.hamburger),
@@ -132,6 +135,17 @@ button:active {
 .italic {
     font-style: italic;
     margin-bottom: $space-300;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 .btn-primary {
@@ -360,11 +374,14 @@ section.footer {
     gap: $space-400;
     h4,
     h3,
+    a,
     p {
         color: white;
         text-align: left;
         margin-bottom: $space-200;
+        display: block;
     }
+    a,
     p {
         margin-bottom: $space-100;
     }
@@ -384,7 +401,8 @@ section.footer {
             img {
                 object-fit: cover;
             }
-            p {
+            p,
+            a {
                 margin-top: 0.4rem;
             }
         }
@@ -398,7 +416,7 @@ section.footer {
 @media only screen and (max-width: 145.125em) {
     section.pre-footer {
         height: 55.25rem;
-        background-position: center top -16rem;
+        background-position: 0;
     }
 }
 

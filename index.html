@@ -23,22 +23,22 @@
   <body>
     <section class="hero">
       <nav class="menu" aria-labelledby="menu-label" id="nav">
-        <ul>
+        <ul id="menu-label">
           <li><a href="#">Guides</a></li>
           <li><a href="#">Prices</a></li>
           <li><a href="#">Membership</a></li>
           <li><a href="#">News</a></li>
         </ul>
-        <button
-          class="hamburger"
-          id="hamburger"
-          aria-labelledby="hamburger"
-          aria-expanded="false"
-        >
+        <button class="hamburger" id="hamburger" aria-expanded="false">
+          <span class="visually-hidden">Open Menu</span>
           ☰
         </button>
       </nav>
-      <div class="hero__bg" alt="">
+      <div
+        class="hero__bg"
+        alt="mountain background"
+        aria-label="snowy sharp pointed mountain"
+      >
         <h1>Mountain Expedition</h1>
         <p class="picture-by">Picture by Dziel Gómez</p>
       </div>
@@ -46,7 +46,8 @@
     <section class="exploration flex">
       <img
         src="images/lakeAndCottage.png"
-        alt="a man sitting on a lake and a cottage"
+        alt="Man sitting near a lake on a dock, mountains in the background. Snow-covered cottage."
+        aria-label="Collage with two images: On the left, a man sitting near a lake on a dock with mountains in the background. On the right, a picture of a snow-covered cottage."
       />
       <div class="exploration__texts">
         <h3>Exploration and relaxation</h3>
@@ -64,38 +65,38 @@
     <section class="read-more flex">
       <div class="flex-item">
         <h4>Travel Guides</h4>
-        <img src="images/fa-solid_hiking.png" alt="hiking icon" />
+        <img src="images/fa-solid_hiking.png" alt="a person hiking icon" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
           purus sit amet luctus venenatis
         </p>
-        <a href="">Read More</a>
+        <a href="#">Read More</a>
       </div>
       <div class="flex-item">
         <h4>Hike Routes</h4>
-        <img src="images/VectorMap.png" alt="hiking icon" />
+        <img src="images/VectorMap.png" alt="map icon" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
           purus sit amet luctus venenatis
         </p>
-        <a href="">Read More</a>
+        <a href="#">Read More</a>
       </div>
       <div class="flex-item">
         <h4>Travel Guides</h4>
-        <img src="images/VectorMountain.png" alt="hiking icon" />
+        <img src="images/VectorMountain.png" alt="mountain icon" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
           purus sit amet luctus venenatis
         </p>
-        <a href="">Read More</a>
+        <a href="#">Read More</a>
       </div>
     </section>
     <section class="full-width-img">
       <img
         src="images/pexels-oziel-gómez-868097.jpg"
-        alt="a man hiking in the mountains"
+        alt="a man hiking in the mountains - Picture by Oziel Gómez"
       />
-      <p class="picture-by">Picture by Oziel Gómez</p>
+      <p class="picture-by" aria-hidden="true">Picture by Oziel Gómez</p>
     </section>
     <section class="book-trip">
       <h2>Life changing experience</h2>
@@ -127,8 +128,11 @@
         </div>
       </div>
     </section>
-    <section class="subscribe">
-      <p class="picture-by">Picture by federico-tomasoni</p>
+    <section
+      class="subscribe"
+      aria-label="A woman looking at the sunset - Picture by federico-tomasoni"
+    >
+      <p class="picture-by" aria-hidden="true">Picture by federico-tomasoni</p>
       <div class="subscribe__holder">
         <h2>What are your waiting for?</h2>
         <h4>
@@ -158,12 +162,16 @@
       <div class="experience__images">
         <img
           src="images/30-exp-images.png"
-          alt="images of hikers and relaxer"
+          alt="Left - Person relaxing in a hammock. Right - Hiker and friend climbing a rock"
+          aria-label="Collage with two images: On the left, a hiker and friend climbing a rock. On the right, a person relaxing in a hammock."
         />
       </div>
     </section>
-    <section class="pre-footer"></section>
-    <section class="footer">
+    <section class="pre-footer" aria-hidden="true"></section>
+    <section
+      class="footer"
+      aria-label="Footer with a background of a mountain at night. Stars are glowing beautifully"
+    >
       <div class="footer__container">
         <div class="flex-item legal">
           <h3><i>Mountain Expedition</i></h3>
@@ -180,28 +188,29 @@
       <div class="flex-item social">
         <div class="footer__container">
           <h4>STAY CONNECTED</h4>
-          <div class="footer__container__item flex">
+          <a href="#" class="footer__container__item flex">
             <img
               src="images/akar-icons_facebook-fill.png"
               alt="facebook icon"
+              aria-hidden="true"
             />
             <p>Facebook</p>
-          </div>
-          <div class="footer__container__item flex">
+          </a>
+          <a href="#" class="footer__container__item flex">
             <img src="images/akar-icons_twitter-fill.png" alt="twitter icon" />
             <p>Twitter</p>
-          </div>
-          <div class="footer__container__item flex">
+          </a>
+          <a href="#" class="footer__container__item flex">
             <img src="images/akar-icons_youtube-fill.png" alt="youtube icon" />
             <p>Youtube</p>
-          </div>
-          <div class="footer__container__item flex">
+          </a>
+          <a href="#" class="footer__container__item flex">
             <img
               src="images/akar-icons_instagram-fill.png"
               alt="instagram icon"
             />
             <p>Instagram</p>
-          </div>
+          </a>
         </div>
       </div>
       <div class="flex-item navigate">
@@ -209,18 +218,18 @@
           <h4>NAVIGATE</h4>
           <div class="footer__container flex">
             <div class="footer__container__item">
-              <p>Blog</p>
-              <p>Events</p>
-              <p>Membership</p>
-              <p>Contact Us</p>
-              <p>Press</p>
+              <p href="#">Blog</p>
+              <p href="#">Events</p>
+              <a href="#">Membership</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Press</a>
             </div>
             <div class="footer__container__item">
-              <p>Links</p>
-              <p>Legal Notices</p>
-              <p>Members Area</p>
-              <p>Renew Membership</p>
-              <p>Become a Member</p>
+              <a href="#">Links</a>
+              <a href="#">Legal Notices</a>
+              <a href="#">Members Area</a>
+              <a href="#">Renew Membership</a>
+              <a href="#">Become a Member</a>
             </div>
           </div>
         </div>
