@@ -187,7 +187,7 @@ section.hero {
     }
     .hero__bg {
         position: relative;
-        background-image: url(images/pexels-pixabay-417173.jpg);
+        background-image: url(images/pexels-pixabay-417173.webp);
         height: calc(32rem + 40vw);
         width: 100%;
         display: flex;
@@ -283,7 +283,7 @@ section.full-width-img {
 }
 ////////// Subscribe
 section.subscribe {
-    background-image: url(images/pexels-federico-tomasoni-11855042.jpg);
+    background-image: url(images/pexels-federico-tomasoni-11855042.webp);
     position: relative;
     height: 67.75rem;
     width: 100%;
@@ -357,7 +357,7 @@ section.pre-footer {
     background-position: center top -34.375rem;
     background-size: cover;
     background-color: $clg-pre-footer;
-    background-image: url(images/pexels-drift-shutterbug-2085998.jpg);
+    background-image: url(images/pexels-drift-shutterbug-2085998.webp);
     background-blend-mode: multiply;
     margin-bottom: 0;
 }
