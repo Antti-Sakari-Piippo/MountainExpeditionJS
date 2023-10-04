@@ -8,6 +8,7 @@
 
 body {
   font-family: "Kaisei Opti", serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -117,6 +118,29 @@ button:active {
   scale: 1.1;
 }
 
+.image-container {
+  overflow: hidden; /* Hide overflowing images */
+}
+
+.animated-element {
+  width: 100%; /* Adjust image width as needed */
+  transform: translateX(0); /* Initially position on-screen */
+  transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
+
+.left {
+  transform: translateX(-100%); /* Position off-screen to the left */
+}
+
+.right {
+  transform: translateX(100%); /* Position off-screen to the right */
+}
+
+.appear {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth opacity transition */
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -172,6 +196,7 @@ section.hero nav ul li a {
   color: white;
   font-size: 1.93rem;
   transition: all ease-in-out 0.25s;
+  font-size: 1.5rem;
 }
 section.hero nav ul li a:hover {
   color: rgb(210, 210, 210);
@@ -198,65 +223,65 @@ section.hero .hero__bg h1 {
 
 section.exploration {
   position: relative;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-auto-flow: dense;
   width: 100%;
-  gap: 7vw;
-  min-height: 62.5rem;
-  margin-top: 4rem !important;
+  gap: 5vw;
   text-align: center;
   margin-bottom: 10rem;
   margin-top: 0;
-  justify-content: center;
-  flex-wrap: wrap-reverse;
-  padding-inline: 0.7rem;
+  padding-inline: 2.5rem;
 }
 section.exploration img {
-  margin: 0 auto 2.5rem auto;
-  margin: 0;
+  scale: 0.9;
 }
-section.exploration .exploration__texts {
+section.exploration .card {
   display: grid;
-  place-content: center;
-  margin: 2.5rem 0;
-  margin: 0;
+  max-width: 630px;
+  text-align: center;
 }
-section.exploration .exploration__texts h3 {
+section.exploration .card h3 {
   margin: auto;
   margin-bottom: -1rem;
 }
-section.exploration .exploration__texts h4.italic {
+section.exploration .card h4.italic {
   margin: auto;
   color: #c07958;
   margin-bottom: 1.5rem;
   font-size: 2.7rem;
 }
-section.exploration .exploration__texts p {
+section.exploration .card p {
   margin: auto;
   margin-bottom: 1.5rem;
   max-width: 45ch;
 }
-section.exploration .exploration__texts button {
+section.exploration .card button {
   margin: auto;
 }
 
-section.read-more {
+section.offerings {
   text-align: center;
   margin: 0 auto 10rem auto;
   justify-content: center;
   color: #c9b6bd;
-  gap: 7vw;
 }
-section.read-more .flex-item h4 {
+section.offerings .flex-item h4 {
   color: #8d6876;
 }
-section.read-more .flex-item img {
+section.offerings .flex-item img {
   margin-bottom: 2.5rem;
 }
-section.read-more .flex-item p {
+section.offerings .flex-item p {
   color: #8d6876;
   max-width: 23ch !important;
 }
-section.read-more .flex-item a {
+section.offerings .flex-item a {
   color: #c07958;
+}
+section.offerings .flex-item a:hover {
+  color: #8d6876;
 }
 
 section.full-width-img {
@@ -322,19 +347,35 @@ section.book-trip .flex .flex-item p {
 
 section.experience {
   position: relative;
-  justify-content: center;
-  align-items: center;
-  gap: 7vw;
+  gap: 5vw;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-auto-flow: dense;
+  padding-inline: 2.5rem;
 }
-section.experience .experience__texts {
-  margin-bottom: 2.5rem;
-  margin-top: 2.5rem;
-  max-width: 89ch;
+section.experience .card {
+  display: grid;
+  max-width: 630px;
+  text-align: center;
 }
-section.experience .experience__texts button {
+section.experience .card h3 {
   margin: auto;
-  display: flex;
-  justify-content: center;
+  margin-bottom: -0.7rem;
+}
+section.experience .card h4.italic {
+  margin: auto;
+  color: #c07958;
+  margin-bottom: 1.5rem;
+  font-size: 2.7rem;
+}
+section.experience .card p {
+  margin: auto;
+  margin-bottom: 1.5rem;
+  max-width: 45ch;
+}
+section.experience .card button {
+  margin: auto;
 }
 
 section.pre-footer {
@@ -368,28 +409,49 @@ section.footer p {
   margin-bottom: 1.5rem;
   display: block;
 }
+section.footer a:hover {
+  color: rgb(210, 210, 210);
+}
+section.footer h4 {
+  font-size: 1.4rem;
+}
 section.footer a,
 section.footer p {
   margin-bottom: 0.7rem;
+  font-size: 1rem;
 }
-section.footer img {
-  margin-bottom: 0.7rem;
+section.footer .company-name {
+  font-size: 2.4rem;
+  display: block;
 }
 section.footer .footer__container .footer__container__item.flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 0.7rem;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 section.footer .flex-item.social {
   margin-top: 1rem;
 }
-section.footer .flex-item.social .footer__container__item img {
+section.footer .flex-item.social .footer__container__item .social-icon {
+  width: 1.7em;
+  height: 1.7em;
   -o-object-fit: cover;
      object-fit: cover;
+}
+section.footer .flex-item.social .footer__container__item .social-icon:hover {
+  opacity: 0.8;
 }
 section.footer .flex-item.social .footer__container__item p,
 section.footer .flex-item.social .footer__container__item a {
   margin-top: 0.4rem;
+}
+section.footer .flex-item.social .footer__container__item p:hover,
+section.footer .flex-item.social .footer__container__item a:hover {
+  color: rgb(210, 210, 210);
 }
 section.footer .flex-item.navigate {
   margin-top: 1rem;
@@ -451,11 +513,18 @@ section.footer .flex-item.navigate {
     border: none;
     font-size: 3.5rem;
   }
+  .menu {
+    transform: translateX(0); /* Initially position on-screen */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+  }
   .menu ul a {
     display: none;
   }
   .menu.open ul a {
     display: block;
+  }
+  .menu.open {
+    transform: translateX(0);
   }
   .menu.open ul {
     display: flex;

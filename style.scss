@@ -27,8 +27,8 @@ $space-500: 10rem;
 
 body {
     font-family: $ff-primary;
+    overflow-x: hidden;
 }
-
 img {
     max-width: 100%;
 }
@@ -125,6 +125,31 @@ button:active {
     z-index: 99999;
     scale: 1.1;
 }
+// Animations - Appear from left or right
+.image-container {
+    overflow: hidden; /* Hide overflowing images */
+}
+
+.animated-element {
+    width: 100%; /* Adjust image width as needed */
+    transform: translateX(0); /* Initially position on-screen */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
+
+.left {
+    transform: translateX(-100%); /* Position off-screen to the left */
+}
+
+.right {
+    transform: translateX(100%); /* Position off-screen to the right */
+}
+//
+
+// Animation appear
+.appear {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth opacity transition */
+}
 
 .flex {
     display: flex;
@@ -178,6 +203,7 @@ section.hero {
                     color: white;
                     font-size: 1.93rem;
                     transition: all ease-in-out 0.25s;
+                    font-size: 1.5rem;
                     &:hover {
                         color: rgb(210, 210, 210);
                     }
@@ -208,26 +234,23 @@ section.hero {
 ////////// Exploration
 section.exploration {
     position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-auto-flow: dense;
     width: 100%;
-    gap: 7vw;
-    min-height: 62.5rem;
-    margin-top: 4rem !important;
+    gap: 5vw;
     text-align: center;
     margin-bottom: $space-500;
     margin-top: 0;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    padding-inline: $space-100;
+    padding-inline: $space-300;
     img {
-        margin: 0 auto $space-300 auto;
-        margin: 0;
+        scale: 0.9;
     }
-
-    .exploration__texts {
+    .card {
         display: grid;
-        place-content: center;
-        margin: 2.5rem 0;
-        margin: 0;
+        max-width: 630px;
+        text-align: center;
         h3 {
             margin: auto;
             margin-bottom: -1rem;
@@ -249,13 +272,12 @@ section.exploration {
     }
 }
 
-////////// Read-more
-section.read-more {
+////////// Offerings
+section.offerings {
     text-align: center;
     margin: 0 auto $space-500 auto;
     justify-content: center;
     color: $clr-secondary;
-    gap: 7vw;
     .flex-item {
         h4 {
             color: $clr-secondary-strong;
@@ -269,6 +291,9 @@ section.read-more {
         }
         a {
             color: $clr-third-strong;
+            &:hover {
+                color: $clr-secondary-strong;
+            }
         }
     }
 }
@@ -335,17 +360,33 @@ section.book-trip {
 ////////// Experience
 section.experience {
     position: relative;
-    justify-content: center;
-    align-items: center;
-    gap: 7vw;
-    .experience__texts {
-        margin-bottom: $space-300;
-        margin-top: $space-300;
-        max-width: 89ch;
+    gap: 5vw;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-auto-flow: dense;
+    padding-inline: $space-300;
+    .card {
+        display: grid;
+        max-width: 630px;
+        text-align: center;
+        h3 {
+            margin: auto;
+            margin-bottom: -0.7rem;
+        }
+        h4.italic {
+            margin: auto;
+            color: $clr-third-strong;
+            margin-bottom: $space-200;
+            font-size: 2.7rem;
+        }
+        p {
+            margin: auto;
+            margin-bottom: $space-200;
+            max-width: 45ch;
+        }
         button {
             margin: auto;
-            display: flex;
-            justify-content: center;
         }
     }
 }
@@ -381,29 +422,49 @@ section.footer {
         margin-bottom: $space-200;
         display: block;
     }
+    a:hover {
+        color: rgb(210, 210, 210);
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
     a,
     p {
         margin-bottom: $space-100;
+        font-size: 1rem;
     }
-    img {
-        margin-bottom: $space-100;
+    .company-name {
+        font-size: 2.4rem;
+        display: block;
     }
+
     .footer__container {
         .footer__container__item.flex {
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
-            gap: $space-300;
+            gap: $space-100;
+            width: fit-content;
         }
     }
     .flex-item.social {
         margin-top: 1rem;
         .footer__container__item {
-            img {
+            .social-icon {
+                width: 1.7em;
+                height: 1.7em;
                 object-fit: cover;
+                &:hover {
+                    opacity: 0.8;
+                }
             }
             p,
             a {
                 margin-top: 0.4rem;
+                &:hover {
+                    color: rgb(210, 210, 210);
+                }
             }
         }
     }
@@ -474,11 +535,18 @@ section.footer {
         border: none;
         font-size: 3.5rem;
     }
+    .menu {
+        transform: translateX(0); /* Initially position on-screen */
+        transition: transform 0.5s ease; /* Add a smooth transition effect */
+    }
     .menu ul a {
         display: none;
     }
     .menu.open ul a {
         display: block;
+    }
+    .menu.open {
+        transform: translateX(0);
     }
 
     .menu.open ul {
