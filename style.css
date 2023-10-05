@@ -119,26 +119,26 @@ button:active {
 }
 
 .image-container {
-  overflow: hidden; /* Hide overflowing images */
+  overflow: hidden;
 }
 
 .animated-element {
-  width: 100%; /* Adjust image width as needed */
-  transform: translateX(0); /* Initially position on-screen */
-  transition: transform 0.5s ease; /* Add a smooth transition effect */
+  width: 100%;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
 }
 
 .left {
-  transform: translateX(-100%); /* Position off-screen to the left */
+  transform: translateX(-100%);
 }
 
 .right {
-  transform: translateX(100%); /* Position off-screen to the right */
+  transform: translateX(100%);
 }
 
 .appear {
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.5s ease; /* Smooth opacity transition */
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .flex {
@@ -179,26 +179,26 @@ section.hero {
   position: relative;
   margin: 0;
 }
-section.hero nav {
+section.hero .nav-container nav {
   position: absolute;
   width: 100%;
   margin-top: 2.5rem;
   z-index: 10000;
 }
-section.hero nav ul {
+section.hero .nav-container nav ul {
   margin-right: 3rem;
   display: flex;
   justify-content: right;
   gap: 3rem;
 }
-section.hero nav ul li a {
+section.hero .nav-container nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 1.93rem;
   transition: all ease-in-out 0.25s;
   font-size: 1.5rem;
 }
-section.hero nav ul li a:hover {
+section.hero .nav-container nav ul li a:hover {
   color: rgb(210, 210, 210);
 }
 section.hero .hero__bg {
@@ -219,6 +219,24 @@ section.hero .hero__bg h1 {
   width: 100%;
   height: 100%;
   text-align: center;
+}
+section.hero .nav {
+  position: absolute;
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateX(-100%);
+}
+section.hero nav.close {
+  transform: translateX(100%) !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+section.hero nav {
+  transform: unset;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 section.exploration {
@@ -301,7 +319,7 @@ section.subscribe {
   width: 100%;
   background-size: cover;
   padding-top: 7rem;
-  background-position: center top -18rem;
+  background-position: center top;
   background-repeat: no-repeat;
   padding-inline: 0.7rem;
 }
@@ -511,22 +529,17 @@ section.footer .flex-item.navigate {
     background-color: unset;
     color: white;
     border: none;
+    z-index: 99999;
     font-size: 3.5rem;
   }
   .menu {
-    transform: translateX(0); /* Initially position on-screen */
-    transition: transform 0.5s ease; /* Add a smooth transition effect */
+    transform: translateX(0);
+    transition: transform 0.5s ease;
   }
   .menu ul a {
-    display: none;
-  }
-  .menu.open ul a {
     display: block;
   }
-  .menu.open {
-    transform: translateX(0);
-  }
-  .menu.open ul {
+  .menu ul {
     display: flex;
     flex-direction: column !important;
     text-align: right;

@@ -127,28 +127,28 @@ button:active {
 }
 // Animations - Appear from left or right
 .image-container {
-    overflow: hidden; /* Hide overflowing images */
+    overflow: hidden;
 }
 
 .animated-element {
-    width: 100%; /* Adjust image width as needed */
-    transform: translateX(0); /* Initially position on-screen */
-    transition: transform 0.5s ease; /* Add a smooth transition effect */
+    width: 100%;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
 }
 
 .left {
-    transform: translateX(-100%); /* Position off-screen to the left */
+    transform: translateX(-100%);
 }
 
 .right {
-    transform: translateX(100%); /* Position off-screen to the right */
+    transform: translateX(100%);
 }
 //
 
 // Animation appear
 .appear {
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease; /* Smooth opacity transition */
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .flex {
@@ -187,7 +187,7 @@ button:active {
 section.hero {
     position: relative;
     margin: 0;
-    nav {
+    .nav-container nav {
         position: absolute;
         width: 100%;
         margin-top: $space-300;
@@ -211,6 +211,7 @@ section.hero {
             }
         }
     }
+
     .hero__bg {
         position: relative;
         background-image: url(images/pexels-pixabay-417173.webp);
@@ -229,6 +230,28 @@ section.hero {
             height: 100%;
             text-align: center;
         }
+    }
+
+    .nav {
+        position: absolute;
+        background-color: #fff;
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+        transform: translateX(-100%);
+    }
+
+    nav.close {
+        transform: translateX(100%) !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav {
+        transform: unset;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 ////////// Exploration
@@ -314,7 +337,7 @@ section.subscribe {
     width: 100%;
     background-size: cover;
     padding-top: 7rem;
-    background-position: center top -18rem;
+    background-position: center top;
     background-repeat: no-repeat;
     padding-inline: $space-100;
     .subscribe__holder {
@@ -516,7 +539,7 @@ section.footer {
     }
 }
 
-//////////Menu
+////////Menu
 .hamburger {
     display: none;
 }
@@ -533,23 +556,17 @@ section.footer {
         background-color: unset;
         color: white;
         border: none;
+        z-index: 99999;
         font-size: 3.5rem;
     }
     .menu {
-        transform: translateX(0); /* Initially position on-screen */
-        transition: transform 0.5s ease; /* Add a smooth transition effect */
+        transform: translateX(0);
+        transition: transform 0.5s ease;
     }
     .menu ul a {
-        display: none;
-    }
-    .menu.open ul a {
         display: block;
     }
-    .menu.open {
-        transform: translateX(0);
-    }
-
-    .menu.open ul {
+    .menu ul {
         display: flex;
         flex-direction: column !important;
         text-align: right;

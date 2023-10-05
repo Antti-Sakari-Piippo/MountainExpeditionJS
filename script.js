@@ -1,18 +1,38 @@
-let hamburger = document.getElementById('hamburger')
-let nav = document.getElementById('nav')
-let menuItems = nav.querySelectorAll('ul a') // Select all navigation menu links
+const menuToggle = document.getElementById('hamburger')
+const menu = document.querySelector('.menu')
 
-hamburger.addEventListener('click', function () {
-  nav.classList.toggle('open')
-  const isExpanded = hamburger.getAttribute('aria-expanded') === 'true'
-  hamburger.setAttribute('aria-expanded', !isExpanded)
+function toggleMenu() {
+  menu.classList.toggle('close')
+  const isClose = menu.classList.contains('close')
+  menuToggle.setAttribute('aria-expanded', isClose.toString())
 
-  // Set focus to the first menu item when the menu is opened
-  if (!isExpanded) {
-    menuItems[0].focus()
+  if (isClose) {
+    // Set focus to the first menu item when the menu is opened
+    const firstMenuItem = menu.querySelector('ul li:first-child a')
+    if (firstMenuItem) {
+      firstMenuItem.focus()
+    }
   }
-})
+}
 
+function closeMenu() {
+  menu.classList.remove('close')
+  menuToggle.setAttribute('aria-expanded', 'false')
+}
+
+menuToggle.addEventListener('click', toggleMenu)
+
+function checkScreenWidth() {
+  if (window.innerWidth > 1000) {
+    closeMenu()
+  }
+}
+
+window.addEventListener('resize', checkScreenWidth)
+
+checkScreenWidth()
+
+////////////////////////////////
 let scroll =
   window.requestAnimationFrame ||
   // IE Fallback
