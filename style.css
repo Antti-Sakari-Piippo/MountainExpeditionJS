@@ -80,6 +80,7 @@ p {
   margin-bottom: 1.5rem;
   text-align: center;
   max-width: 30ch;
+  line-height: 1.4;
 }
 
 p,
@@ -333,9 +334,10 @@ section.subscribe .subscribe__holder h2 {
   margin-bottom: 1.5rem;
 }
 section.subscribe .subscribe__holder h4 {
-  max-width: 47ch;
+  max-width: 45ch;
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.5rem;
 }
 section.subscribe .subscribe__holder .buttons {
   justify-content: center;
