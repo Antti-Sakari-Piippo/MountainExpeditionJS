@@ -458,16 +458,18 @@ section.pre-footer {
 
 ////////// Footer
 section.footer {
-    max-width: $footer-container;
-    margin-inline: auto;
     background-color: $clg-footer;
     margin-bottom: 0;
     margin-top: 0;
-    padding: $space-500-vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: left;
-    gap: $space-400;
+    .footer-inner-container {
+        max-width: $footer-container;
+        margin-inline: auto;
+        padding: $space-500-vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        gap: $space-400;
+    }
     h4,
     h3,
     a,
@@ -503,10 +505,6 @@ section.footer {
     .company-name {
         font-size: 2.4rem;
         display: block;
-    }
-    .footer__container:has(.legal) {
-        // display: flex;
-        // justify-content: center;
     }
     .footer__container__item.flex {
         display: flex;
@@ -579,7 +577,7 @@ section.footer {
 }
 
 @media only screen and (max-width: 87.5em) {
-    section.footer {
+    section.footer .footer-inner-container {
         grid-template-columns: 1fr 1fr !important;
     }
 }
@@ -625,7 +623,7 @@ section.footer {
         padding-top: 9rem;
         backdrop-filter: blur(3px);
     }
-    body section.footer {
+    body section.footer .footer-inner-container {
         grid-template-columns: 1fr !important;
     }
 }
