@@ -29,6 +29,10 @@ section {
   margin: 10rem auto;
 }
 
+.section-container {
+  max-width: 103.75rem;
+}
+
 h2 {
   color: #8d6876;
   font-size: 5.625rem;
@@ -532,6 +536,7 @@ section.footer .flex-item.navigate {
     color: white;
     border: none;
     z-index: 99999;
+    margin-top: 2rem;
     font-size: 3.5rem;
   }
   .menu {

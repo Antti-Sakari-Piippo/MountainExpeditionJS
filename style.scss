@@ -25,6 +25,8 @@ $space-400: 3rem;
 $space-500-vw: 3.5vw;
 $space-500: 10rem;
 
+$section-container: 103.75rem;
+
 body {
     font-family: $ff-primary;
     overflow-x: hidden;
@@ -43,6 +45,10 @@ h1 {
 }
 section {
     margin: $space-500 auto;
+}
+
+.section-container {
+    max-width: $section-container;
 }
 
 h2 {
@@ -559,6 +565,7 @@ section.footer {
         color: white;
         border: none;
         z-index: 99999;
+        margin-top: 2rem;
         font-size: 3.5rem;
     }
     .menu {
