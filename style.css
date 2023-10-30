@@ -415,6 +415,10 @@ section.pre-footer {
 }
 
 section.footer {
+  max-width: 120rem;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
   background-color: #0d0f18;
   margin-bottom: 0;
   margin-top: 0;
@@ -430,25 +434,41 @@ section.footer a,
 section.footer p {
   color: white;
   text-align: left;
-  margin-bottom: 1.5rem;
   display: block;
 }
 section.footer a:hover {
   color: rgb(210, 210, 210);
+}
+section.footer h3 {
+  margin-bottom: 1.3rem;
 }
 section.footer h4 {
   font-size: 1.4rem;
 }
 section.footer a,
 section.footer p {
-  margin-bottom: 0.7rem;
   font-size: 1rem;
+}
+section.footer .legal p {
+  margin-bottom: 0.3rem;
+}
+section.footer .social a,
+section.footer .social p {
+  margin-bottom: 0.7rem;
+}
+section.footer .navigate p,
+section.footer .navigate a {
+  margin-bottom: 1.3rem;
 }
 section.footer .company-name {
   font-size: 2.4rem;
   display: block;
 }
-section.footer .footer__container .footer__container__item.flex {
+section.footer .footer__container:has(.legal) {
+  display: flex;
+  justify-content: center;
+}
+section.footer .footer__container__item.flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -458,6 +478,8 @@ section.footer .footer__container .footer__container__item.flex {
   width: fit-content;
 }
 section.footer .flex-item.social {
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
 }
 section.footer .flex-item.social .footer__container__item .social-icon {
@@ -478,6 +500,8 @@ section.footer .flex-item.social .footer__container__item a:hover {
   color: rgb(210, 210, 210);
 }
 section.footer .flex-item.navigate {
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
 }
 

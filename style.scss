@@ -26,6 +26,7 @@ $space-500-vw: 3.5vw;
 $space-500: 10rem;
 
 $section-container: 103.75rem;
+$footer-container: 120rem;
 
 body {
     font-family: $ff-primary;
@@ -436,6 +437,10 @@ section.pre-footer {
 
 ////////// Footer
 section.footer {
+    max-width: $footer-container;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
     background-color: $clg-footer;
     margin-bottom: 0;
     margin-top: 0;
@@ -450,36 +455,51 @@ section.footer {
     p {
         color: white;
         text-align: left;
-        margin-bottom: $space-200;
         display: block;
     }
     a:hover {
         color: rgb(210, 210, 210);
+    }
+    h3 {
+        margin-bottom: 1.3rem;
     }
     h4 {
         font-size: 1.4rem;
     }
     a,
     p {
-        margin-bottom: $space-100;
         font-size: 1rem;
+    }
+    .legal p {
+        margin-bottom: 0.3rem;
+    }
+    .social a,
+    .social p {
+        margin-bottom: $space-100;
+    }
+    .navigate p,
+    .navigate a {
+        margin-bottom: 1.3rem;
     }
     .company-name {
         font-size: 2.4rem;
         display: block;
     }
-
-    .footer__container {
-        .footer__container__item.flex {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: $space-100;
-            width: fit-content;
-        }
+    .footer__container:has(.legal) {
+        display: flex;
+        justify-content: center;
+    }
+    .footer__container__item.flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $space-100;
+        width: fit-content;
     }
     .flex-item.social {
+        display: flex;
+        justify-content: center;
         margin-top: 1rem;
         .footer__container__item {
             .social-icon {
@@ -500,6 +520,8 @@ section.footer {
         }
     }
     .flex-item.navigate {
+        display: flex;
+        justify-content: center;
         margin-top: 1rem;
     }
 }
