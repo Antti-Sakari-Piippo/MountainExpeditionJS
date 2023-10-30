@@ -104,11 +104,35 @@ a,
 button {
     font-size: 1.3rem;
 }
+// link hover
 a {
     letter-spacing: 0.1rem;
     color: white;
     cursor: pointer;
     text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+}
+a:before {
+    content: '';
+    background: $clr-secondary;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-position: 0;
+}
+
+a:hover::before {
+    width: 100%;
 }
 
 button:not(.hamburger),
@@ -243,9 +267,6 @@ section.hero {
     .nav {
         position: absolute;
         background-color: #fff;
-        transition:
-            transform 0.3s ease,
-            opacity 0.3s ease;
         transform: translateX(-100%);
     }
 
@@ -438,8 +459,6 @@ section.pre-footer {
 ////////// Footer
 section.footer {
     max-width: $footer-container;
-    display: flex;
-    justify-content: space-between;
     margin-inline: auto;
     background-color: $clg-footer;
     margin-bottom: 0;
@@ -486,8 +505,8 @@ section.footer {
         display: block;
     }
     .footer__container:has(.legal) {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
     }
     .footer__container__item.flex {
         display: flex;
@@ -498,8 +517,6 @@ section.footer {
         width: fit-content;
     }
     .flex-item.social {
-        display: flex;
-        justify-content: center;
         margin-top: 1rem;
         .footer__container__item {
             .social-icon {
@@ -520,8 +537,6 @@ section.footer {
         }
     }
     .flex-item.navigate {
-        display: flex;
-        justify-content: center;
         margin-top: 1rem;
     }
 }
@@ -595,7 +610,7 @@ section.footer {
         transition: transform 0.5s ease;
     }
     .menu ul a {
-        display: block;
+        display: inline-block;
     }
     .menu ul {
         display: flex;

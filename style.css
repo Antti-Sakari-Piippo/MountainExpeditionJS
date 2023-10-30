@@ -98,6 +98,31 @@ a {
   color: white;
   cursor: pointer;
   text-decoration: none;
+  padding: 5px 0;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+a:before {
+  content: "";
+  background: #c9b6bd;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width: 100%;
 }
 
 button:not(.hamburger),
@@ -228,7 +253,6 @@ section.hero .hero__bg h1 {
 section.hero .nav {
   position: absolute;
   background-color: #fff;
-  transition: transform 0.3s ease, opacity 0.3s ease;
   transform: translateX(-100%);
 }
 section.hero nav.close {
@@ -416,8 +440,6 @@ section.pre-footer {
 
 section.footer {
   max-width: 120rem;
-  display: flex;
-  justify-content: space-between;
   margin-inline: auto;
   background-color: #0d0f18;
   margin-bottom: 0;
@@ -464,10 +486,6 @@ section.footer .company-name {
   font-size: 2.4rem;
   display: block;
 }
-section.footer .footer__container:has(.legal) {
-  display: flex;
-  justify-content: center;
-}
 section.footer .footer__container__item.flex {
   display: flex;
   justify-content: center;
@@ -478,8 +496,6 @@ section.footer .footer__container__item.flex {
   width: fit-content;
 }
 section.footer .flex-item.social {
-  display: flex;
-  justify-content: center;
   margin-top: 1rem;
 }
 section.footer .flex-item.social .footer__container__item .social-icon {
@@ -500,8 +516,6 @@ section.footer .flex-item.social .footer__container__item a:hover {
   color: rgb(210, 210, 210);
 }
 section.footer .flex-item.navigate {
-  display: flex;
-  justify-content: center;
   margin-top: 1rem;
 }
 
@@ -568,7 +582,7 @@ section.footer .flex-item.navigate {
     transition: transform 0.5s ease;
   }
   .menu ul a {
-    display: block;
+    display: inline-block;
   }
   .menu ul {
     display: flex;
