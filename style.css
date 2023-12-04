@@ -67,6 +67,7 @@ h4 {
   font-size: 2.2rem;
   text-align: center;
   font-weight: 200;
+  line-height: 1.4;
 }
 
 p.picture-by {
@@ -174,7 +175,7 @@ button:active {
 .flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 3.5vw;
+  gap: 7vw;
 }
 
 .italic {
@@ -335,7 +336,7 @@ section.full-width-img {
   position: relative;
 }
 section.full-width-img img {
-  height: 62.5rem;
+  height: 35rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -344,7 +345,7 @@ section.full-width-img img {
 section.subscribe {
   background-image: url(images/pexels-federico-tomasoni-11855042.webp);
   position: relative;
-  height: 67.75rem;
+  height: 65rem;
   width: 100%;
   background-size: cover;
   padding-top: 7rem;
