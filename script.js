@@ -106,3 +106,8 @@ const observer2 = new IntersectionObserver((entries) => {
 appear.forEach((element) => {
   observer2.observe(element)
 })
+
+// Get current year for copyright text
+const yearElement = document.getElementById('currentYear')
+const currentYear = new Date().getFullYear()
+yearElement.innerText = `Copyright © ${currentYear} Mountain Expedition`

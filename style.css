@@ -33,6 +33,10 @@ section {
   max-width: 103.75rem;
 }
 
+.copyright {
+  font-size: 0.8rem !important;
+}
+
 h2 {
   color: #8d6876;
   font-size: 5.625rem;
@@ -82,7 +86,6 @@ p.picture-by {
 p {
   color: #584149;
   font-size: 1.3rem;
-  margin-bottom: 1.5rem;
   text-align: center;
   max-width: 30ch;
   line-height: 1.4;
@@ -302,7 +305,7 @@ section.exploration .card h4.italic {
 }
 section.exploration .card p {
   margin: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   max-width: 45ch;
 }
 section.exploration .card button {
@@ -324,6 +327,7 @@ section.offerings .flex-item img {
 section.offerings .flex-item p {
   color: #8d6876;
   max-width: 23ch !important;
+  margin-bottom: 1.5rem;
 }
 section.offerings .flex-item a {
   color: #c07958;
@@ -336,7 +340,7 @@ section.full-width-img {
   position: relative;
 }
 section.full-width-img img {
-  height: 35rem;
+  height: 45rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -420,7 +424,7 @@ section.experience .card h4.italic {
 }
 section.experience .card p {
   margin: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   max-width: 45ch;
 }
 section.experience .card button {
