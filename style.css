@@ -483,11 +483,11 @@ section.footer .legal p {
 }
 section.footer .social a,
 section.footer .social p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 section.footer .navigate p,
 section.footer .navigate a {
-  margin-bottom: 1.3rem;
+  margin-bottom: 0.7rem;
 }
 section.footer .company-name {
   font-size: 2.4rem;
