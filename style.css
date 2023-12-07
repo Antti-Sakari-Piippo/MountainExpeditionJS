@@ -6,6 +6,7 @@
   list-style: none;
 }
 
+@layer override;
 body {
   font-family: "Kaisei Opti", serif;
   overflow-x: hidden;
@@ -34,7 +35,7 @@ section {
 }
 
 .copyright {
-  font-size: 0.8rem !important;
+  font-size: 0.8rem;
 }
 
 h2 {
@@ -260,7 +261,7 @@ section.hero .nav {
   transform: translateX(-100%);
 }
 section.hero nav.close {
-  transform: translateX(100%) !important;
+  transform: translateX(100%);
   position: absolute;
   top: 0;
   right: 0;
@@ -326,7 +327,7 @@ section.offerings .flex-item img {
 }
 section.offerings .flex-item p {
   color: #8d6876;
-  max-width: 23ch !important;
+  max-width: 23ch;
   margin-bottom: 1.5rem;
 }
 section.offerings .flex-item a {
@@ -435,7 +436,6 @@ section.pre-footer {
   height: 61.5rem;
   width: 100%;
   background-repeat: no-repeat;
-  background-position: center top -34.375rem;
   background-size: cover;
   background-color: #7070ff;
   background-image: url(images/pexels-drift-shutterbug-2085998.webp);
@@ -526,52 +526,52 @@ section.footer .flex-item.navigate {
   margin-top: 1rem;
 }
 
-@media only screen and (max-width: 145.125em) {
-  section.pre-footer {
-    height: 55.25rem;
-    background-position: 0;
+@layer override {
+  @media only screen and (max-width: 145.125em) {
+    section.pre-footer {
+      height: 55.25rem;
+      background-position: 0;
+    }
+  }
+  @media only screen and (max-width: 116.25em) {
+    section.pre-footer {
+      background-position: center top 0rem;
+    }
+    section.subscribe {
+      background-position: center;
+    }
+    section.experience .experience__texts {
+      margin-top: 0;
+    }
+  }
+  @media only screen and (max-width: 31.25em) {
+    .book-trip h2 {
+      font-size: 3.6rem;
+    }
+  }
+  @media only screen and (max-width: 50em) {
+    h1 {
+      font-size: calc(13vw + 1rem);
+    }
+    h2 {
+      font-size: 3.3rem;
+    }
+    h4 {
+      font-size: 1.6rem;
+    }
+  }
+  @media only screen and (max-width: 87.5em) {
+    section.footer .footer-inner-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .hamburger {
+    display: none;
+  }
+  .menu ul a {
+    display: block;
   }
 }
-@media only screen and (max-width: 116.25em) {
-  section.pre-footer {
-    background-position: center top 0rem;
-  }
-  section.subscribe {
-    background-position: center;
-  }
-  section.experience .experience__texts {
-    margin-top: 0;
-  }
-}
-@media only screen and (max-width: 31.25em) {
-  .book-trip h2 {
-    font-size: 3.6rem;
-  }
-}
-@media only screen and (max-width: 50em) {
-  h1 {
-    font-size: calc(13vw + 1rem) !important;
-  }
-  h2 {
-    font-size: 3.3rem !important;
-  }
-  h4 {
-    font-size: 1.6rem;
-  }
-}
-@media only screen and (max-width: 87.5em) {
-  section.footer .footer-inner-container {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-.hamburger {
-  display: none;
-}
-
-.menu ul a {
-  display: block;
-}
-
 @media only screen and (max-width: 62.5em) {
   .hamburger {
     display: block;
@@ -593,7 +593,7 @@ section.footer .flex-item.navigate {
   }
   .menu ul {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column;
     text-align: right;
     background-color: rgba(129, 205, 254, 0.9);
     position: absolute;
@@ -606,6 +606,6 @@ section.footer .flex-item.navigate {
             backdrop-filter: blur(3px);
   }
   body section.footer .footer-inner-container {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */

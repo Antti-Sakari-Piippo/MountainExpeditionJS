@@ -25,6 +25,8 @@ menuToggle.addEventListener('click', toggleMenu)
 function checkScreenWidth() {
   if (window.innerWidth > 1000) {
     closeMenu()
+  } else {
+    menu.classList.add('close')
   }
 }
 

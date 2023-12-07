@@ -28,6 +28,8 @@ $space-500: 10rem;
 $section-container: 103.75rem;
 $footer-container: 120rem;
 
+@layer override;
+
 body {
     font-family: $ff-primary;
     overflow-x: hidden;
@@ -52,7 +54,7 @@ section {
     max-width: $section-container;
 }
 .copyright {
-    font-size: 0.8rem !important;
+    font-size: 0.8rem;
 }
 
 h2 {
@@ -274,7 +276,7 @@ section.hero {
     }
 
     nav.close {
-        transform: translateX(100%) !important;
+        transform: translateX(100%);
         position: absolute;
         top: 0;
         right: 0;
@@ -342,7 +344,7 @@ section.offerings {
         }
         p {
             color: $clr-secondary-strong;
-            max-width: 23ch !important;
+            max-width: 23ch;
             margin-bottom: $space-200;
         }
         a {
@@ -452,9 +454,8 @@ section.pre-footer {
     height: 61.5rem;
     width: 100%;
     background-repeat: no-repeat;
-    background-position: center top -34.375rem;
     background-size: cover;
-    background-color: $clg-pre-footer;
+    background-color: #7070ff;
     background-image: url(images/pexels-drift-shutterbug-2085998.webp);
     background-blend-mode: multiply;
     margin-bottom: 0;
@@ -542,59 +543,59 @@ section.footer {
         margin-top: 1rem;
     }
 }
+@layer override {
+    ///////////Media queries
+    @media only screen and (max-width: 145.125em) {
+        section.pre-footer {
+            height: 55.25rem;
+            background-position: 0;
+        }
+    }
 
-///////////Media queries
-@media only screen and (max-width: 145.125em) {
-    section.pre-footer {
-        height: 55.25rem;
-        background-position: 0;
+    @media only screen and (max-width: 116.25em) {
+        section.pre-footer {
+            background-position: center top 0rem;
+        }
+        section.subscribe {
+            background-position: center;
+        }
+        section.experience .experience__texts {
+            margin-top: 0;
+        }
+    }
+
+    @media only screen and (max-width: 31.25em) {
+        .book-trip h2 {
+            font-size: 3.6rem;
+        }
+    }
+    @media only screen and (max-width: 50em) {
+        h1 {
+            font-size: calc(13vw + 1rem);
+        }
+        h2 {
+            font-size: 3.3rem;
+        }
+        h4 {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media only screen and (max-width: 87.5em) {
+        section.footer .footer-inner-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    ////////Menu
+    .hamburger {
+        display: none;
+    }
+
+    .menu ul a {
+        display: block;
     }
 }
-
-@media only screen and (max-width: 116.25em) {
-    section.pre-footer {
-        background-position: center top 0rem;
-    }
-    section.subscribe {
-        background-position: center;
-    }
-    section.experience .experience__texts {
-        margin-top: 0;
-    }
-}
-
-@media only screen and (max-width: 31.25em) {
-    .book-trip h2 {
-        font-size: 3.6rem;
-    }
-}
-@media only screen and (max-width: 50em) {
-    h1 {
-        font-size: calc(13vw + 1rem) !important;
-    }
-    h2 {
-        font-size: 3.3rem !important;
-    }
-    h4 {
-        font-size: 1.6rem;
-    }
-}
-
-@media only screen and (max-width: 87.5em) {
-    section.footer .footer-inner-container {
-        grid-template-columns: 1fr 1fr !important;
-    }
-}
-
-////////Menu
-.hamburger {
-    display: none;
-}
-
-.menu ul a {
-    display: block;
-}
-
 @media only screen and (max-width: 62.5em) {
     .hamburger {
         display: block;
@@ -616,7 +617,7 @@ section.footer {
     }
     .menu ul {
         display: flex;
-        flex-direction: column !important;
+        flex-direction: column;
         text-align: right;
         background-color: rgba($color: #81cdfe, $alpha: 0.9);
         position: absolute;
@@ -628,6 +629,6 @@ section.footer {
         backdrop-filter: blur(3px);
     }
     body section.footer .footer-inner-container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
     }
 }
