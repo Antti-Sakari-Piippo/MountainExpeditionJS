@@ -28,7 +28,15 @@ $space-500: 10rem;
 $section-container: 103.75rem;
 $footer-container: 120rem;
 
-@layer override;
+$elem-size: min(27rem, 86%);
+
+// Media queries
+$xl: 145.125em;
+$large: 116.25em;
+$medium: 87.5em;
+$small: 62.5em;
+$xl-small: 50em;
+$xxl-small: 31.25em;
 
 body {
     font-family: $ff-primary;
@@ -191,7 +199,7 @@ button:active {
 .flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 7vw;
+    gap: 4rem 7vw;
 }
 
 .italic {
@@ -261,7 +269,7 @@ section.hero {
         h1 {
             position: absolute;
             color: white;
-            font-size: calc(8vw + 1rem);
+            font-size: 9vw;
             top: 37%;
             width: 100%;
             height: 100%;
@@ -293,10 +301,10 @@ section.exploration {
     position: relative;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax($elem-size, 1fr));
     grid-auto-flow: dense;
     width: 100%;
-    gap: 5vw;
+    gap: 5rem 5vw;
     text-align: center;
     margin-bottom: $space-500;
     margin-top: 0;
@@ -419,10 +427,10 @@ section.book-trip {
 ////////// Experience
 section.experience {
     position: relative;
-    gap: 5vw;
+    gap: 5rem 5vw;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax($elem-size, 1fr));
     grid-auto-flow: dense;
     padding-inline: $space-300;
     .card {
@@ -543,60 +551,62 @@ section.footer {
         margin-top: 1rem;
     }
 }
-@layer override {
-    ///////////Media queries
-    @media only screen and (max-width: 145.125em) {
-        section.pre-footer {
-            height: 55.25rem;
-            background-position: 0;
-        }
-    }
-
-    @media only screen and (max-width: 116.25em) {
-        section.pre-footer {
-            background-position: center top 0rem;
-        }
-        section.subscribe {
-            background-position: center;
-        }
-        section.experience .experience__texts {
-            margin-top: 0;
-        }
-    }
-
-    @media only screen and (max-width: 31.25em) {
-        .book-trip h2 {
-            font-size: 3.6rem;
-        }
-    }
-    @media only screen and (max-width: 50em) {
-        h1 {
-            font-size: calc(13vw + 1rem);
-        }
-        h2 {
-            font-size: 3.3rem;
-        }
-        h4 {
-            font-size: 1.6rem;
-        }
-    }
-
-    @media only screen and (max-width: 87.5em) {
-        section.footer .footer-inner-container {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
-    ////////Menu
-    .hamburger {
-        display: none;
-    }
-
-    .menu ul a {
-        display: block;
+///////////Media queries
+@media only screen and (max-width: $xl) {
+    section.pre-footer {
+        height: 55.25rem;
+        background-position: 0;
     }
 }
-@media only screen and (max-width: 62.5em) {
+
+@media only screen and (max-width: $large) {
+    section.pre-footer {
+        background-position: center top 0rem;
+    }
+    section.subscribe {
+        background-position: center;
+    }
+    section.experience .experience__texts {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: $xxl-small) {
+    .book-trip h2 {
+        font-size: 3.6rem;
+    }
+}
+@media only screen and (max-width: $xl-small) {
+    h1 {
+        font-size: 14vw !important;
+        top: 24% !important;
+    }
+    h2 {
+        font-size: 3.3rem;
+    }
+    h4 {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: $medium) {
+    section.footer .footer-inner-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    body section.exploration img {
+        scale: 1;
+    }
+}
+
+////////Menu
+.hamburger {
+    display: none;
+}
+
+.menu ul a {
+    display: block;
+}
+@media only screen and (max-width: $small) {
     .hamburger {
         display: block;
         position: absolute;
