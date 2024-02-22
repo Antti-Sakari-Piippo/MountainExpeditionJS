@@ -13,6 +13,12 @@ body {
 
 img {
   max-width: 100%;
+  display: block;
+}
+
+.italic {
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 2.5rem;
 }
 
 h2,
@@ -30,7 +36,7 @@ section {
 }
 
 .section-container {
-  max-width: 103.75rem;
+  max-width: 95rem;
 }
 
 .copyright {
@@ -38,31 +44,27 @@ section {
 }
 
 h2 {
-  color: #8d6876;
+  color: hsl(337, 15%, 48%);
   font-size: 5.625rem;
   text-align: center;
 }
 
 h3.italic {
-  color: #c07958;
+  color: hsl(19, 45%, 55%);
   font-size: 3.5rem;
   text-align: center;
   font-family: "Dancing Script", cursive;
 }
 
 h3 {
-  color: #8d6876;
+  color: hsl(337, 15%, 48%);
   font-size: 3.8rem;
   text-align: center;
 }
 
 h2.italic {
   font-size: 4rem;
-  color: #c07958;
-}
-
-.italic {
-  font-family: "Dancing Script", cursive;
+  color: hsl(19, 45%, 55%);
 }
 
 h4 {
@@ -74,21 +76,21 @@ h4 {
   line-height: 1.4;
 }
 
-p.picture-by {
+p {
+  color: hsl(339, 15%, 30%);
+  font-size: 1.3rem;
+  text-align: center;
+  max-width: 30ch;
+  line-height: 1.4;
+}
+
+.picture-by {
   top: 0;
   position: absolute;
   font-size: 0.8rem;
   color: white;
   padding-left: 0.7rem;
   padding-top: 0.7rem;
-}
-
-p {
-  color: #584149;
-  font-size: 1.3rem;
-  text-align: center;
-  max-width: 30ch;
-  line-height: 1.4;
 }
 
 p,
@@ -111,7 +113,7 @@ a {
 
 a:before {
   content: "";
-  background: #c9b6bd;
+  background: hsl(338, 15%, 75%);
   display: block;
   position: absolute;
   bottom: -3px;
@@ -127,6 +129,18 @@ a:hover {
 
 a:hover::before {
   width: 100%;
+}
+
+.btn-primary {
+  background-color: hsl(204, 98%, 75%);
+}
+
+.btn-secondary {
+  background-color: hsl(337, 15%, 48%);
+}
+
+.btn-third {
+  background-color: hsl(19, 45%, 55%);
 }
 
 button:not(.hamburger),
@@ -181,9 +195,14 @@ button:active {
   gap: 4rem 7vw;
 }
 
-.italic {
-  font-style: italic;
-  margin-bottom: 2.5rem;
+.full-width-img {
+  position: relative;
+}
+.full-width-img img {
+  height: 45rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .visually-hidden {
@@ -195,18 +214,6 @@ button:active {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-}
-
-.btn-primary {
-  background-color: #81cdfe;
-}
-
-.btn-secondary {
-  background-color: #8d6876;
-}
-
-.btn-third {
-  background-color: #c07958;
 }
 
 section.hero {
@@ -299,7 +306,7 @@ section.exploration .card h3 {
 }
 section.exploration .card h4.italic {
   margin: auto;
-  color: #c07958;
+  color: hsl(19, 45%, 55%);
   margin-bottom: 1.5rem;
   font-size: 2.7rem;
 }
@@ -316,34 +323,25 @@ section.offerings {
   text-align: center;
   margin: 0 auto 10rem auto;
   justify-content: center;
-  color: #c9b6bd;
+  color: hsl(338, 15%, 75%);
 }
 section.offerings .flex-item h4 {
-  color: #8d6876;
+  color: hsl(337, 15%, 48%);
 }
 section.offerings .flex-item img {
   margin-bottom: 2.5rem;
+  margin-inline: auto;
 }
 section.offerings .flex-item p {
-  color: #8d6876;
+  color: hsl(337, 15%, 48%);
   max-width: 23ch;
   margin-bottom: 1.5rem;
 }
 section.offerings .flex-item a {
-  color: #c07958;
+  color: hsl(19, 45%, 55%);
 }
 section.offerings .flex-item a:hover {
-  color: #8d6876;
-}
-
-section.full-width-img {
-  position: relative;
-}
-section.full-width-img img {
-  height: 45rem;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  color: hsl(337, 15%, 48%);
 }
 
 section.subscribe {
@@ -391,11 +389,11 @@ section.book-trip .flex .flex-item {
   max-width: 30ch;
 }
 section.book-trip .flex .flex-item h4 {
-  color: #8d6876;
+  color: hsl(337, 15%, 48%);
   white-space: nowrap;
 }
 section.book-trip .flex .flex-item p {
-  color: #8d6876;
+  color: hsl(337, 15%, 48%);
 }
 
 section.experience {
@@ -418,7 +416,7 @@ section.experience .card h3 {
 }
 section.experience .card h4.italic {
   margin: auto;
-  color: #c07958;
+  color: hsl(19, 45%, 55%);
   margin-bottom: 1.5rem;
   font-size: 2.7rem;
 }
@@ -443,7 +441,7 @@ section.pre-footer {
 }
 
 section.footer {
-  background-color: #0d0f18;
+  background-color: hsl(229, 30%, 7%);
   margin-bottom: 0;
   margin-top: 0;
 }

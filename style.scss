@@ -6,18 +6,21 @@
     list-style: none;
 }
 
+// Fonts
 $ff-primary: 'Kaisei Opti', serif;
 $italic: 'Dancing Script', cursive;
 
-$clr-primary: #81cdfe;
-$clr-secondary: #c9b6bd;
-$clr-third: #e0bdad;
-$clr-secondary-strong: #8d6876;
-$clr-third-strong: #c07958;
-$clr-dark: #584149;
-$clg-pre-footer: #7070ff;
-$clg-footer: #0d0f18;
+// Colors
+$clr-primary: hsl(204, 98%, 75%);
+$clr-secondary: hsl(338, 15%, 75%);
+$clr-third: hsl(19, 45%, 78%);
+$clr-secondary-strong: hsl(337, 15%, 48%);
+$clr-third-strong: hsl(19, 45%, 55%);
+$clr-dark: hsl(339, 15%, 30%);
+$clg-pre-footer: hsl(240, 100%, 72%);
+$clg-footer: hsl(229, 30%, 7%);
 
+// Spaces
 $space-100: 0.7rem;
 $space-200: 1.5rem;
 $space-300: 2.5rem;
@@ -25,12 +28,12 @@ $space-400: 3rem;
 $space-500-vw: 3.5vw;
 $space-500: 10rem;
 
-$section-container: 103.75rem;
+// content size
+$section-container: 95rem;
 $footer-container: 120rem;
-
 $elem-size: min(27rem, 86%);
 
-// Media queries
+// Media size
 $xl: 145.125em;
 $large: 116.25em;
 $medium: 87.5em;
@@ -42,8 +45,17 @@ body {
     font-family: $ff-primary;
     overflow-x: hidden;
 }
+
+// Images
 img {
     max-width: 100%;
+    display: block;
+}
+
+// Texts
+.italic {
+    font-family: $italic;
+    margin-bottom: $space-300;
 }
 h2,
 h3,
@@ -70,24 +82,25 @@ h2 {
     font-size: 5.625rem;
     text-align: center;
 }
+
 h3.italic {
     color: $clr-third-strong;
     font-size: 3.5rem;
     text-align: center;
     font-family: $italic;
 }
+
 h3 {
     color: $clr-secondary-strong;
     font-size: 3.8rem;
     text-align: center;
 }
+
 h2.italic {
     font-size: 4rem;
     color: $clr-third-strong;
 }
-.italic {
-    font-family: $italic;
-}
+
 h4 {
     color: white;
     margin-bottom: $space-200;
@@ -96,14 +109,7 @@ h4 {
     font-weight: 200;
     line-height: 1.4;
 }
-p.picture-by {
-    top: 0;
-    position: absolute;
-    font-size: 0.8rem;
-    color: white;
-    padding-left: $space-100;
-    padding-top: $space-100;
-}
+
 p {
     color: $clr-dark;
     font-size: 1.3rem;
@@ -112,12 +118,21 @@ p {
     line-height: 1.4;
 }
 
+.picture-by {
+    top: 0;
+    position: absolute;
+    font-size: 0.8rem;
+    color: white;
+    padding-left: $space-100;
+    padding-top: $space-100;
+}
+
 p,
 a,
 button {
     font-size: 1.3rem;
 }
-// link hover
+// Links
 a {
     letter-spacing: 0.1rem;
     color: white;
@@ -148,6 +163,16 @@ a:hover::before {
     width: 100%;
 }
 
+// Buttons
+.btn-primary {
+    background-color: $clr-primary;
+}
+.btn-secondary {
+    background-color: $clr-secondary-strong;
+}
+.btn-third {
+    background-color: $clr-third-strong;
+}
 button:not(.hamburger),
 button:not(.hamburger):focus {
     border: 1px solid transparent;
@@ -170,7 +195,8 @@ button:active {
     z-index: 99999;
     scale: 1.1;
 }
-// Animations - Appear from left or right
+
+// Utilities
 .image-container {
     overflow: hidden;
 }
@@ -188,9 +214,7 @@ button:active {
 .right {
     transform: translateX(100%);
 }
-//
 
-// Animation appear
 .appear {
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -202,9 +226,13 @@ button:active {
     gap: 4rem 7vw;
 }
 
-.italic {
-    font-style: italic;
-    margin-bottom: $space-300;
+.full-width-img {
+    position: relative;
+    img {
+        height: 45rem;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .visually-hidden {
@@ -216,16 +244,6 @@ button:active {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-}
-
-.btn-primary {
-    background-color: $clr-primary;
-}
-.btn-secondary {
-    background-color: $clr-secondary-strong;
-}
-.btn-third {
-    background-color: $clr-third-strong;
 }
 
 ////////// HERO
@@ -296,6 +314,7 @@ section.hero {
         right: 0;
     }
 }
+
 ////////// Exploration
 section.exploration {
     position: relative;
@@ -349,6 +368,7 @@ section.offerings {
         }
         img {
             margin-bottom: $space-300;
+            margin-inline: auto;
         }
         p {
             color: $clr-secondary-strong;
@@ -363,15 +383,7 @@ section.offerings {
         }
     }
 }
-////////// Full-width-img
-section.full-width-img {
-    position: relative;
-    img {
-        height: 45rem;
-        width: 100%;
-        object-fit: cover;
-    }
-}
+
 ////////// Subscribe
 section.subscribe {
     background-image: url(images/pexels-federico-tomasoni-11855042.webp);
@@ -402,6 +414,7 @@ section.subscribe {
         }
     }
 }
+
 ////////// Book-trip
 section.book-trip {
     text-align: center;
@@ -424,6 +437,7 @@ section.book-trip {
         }
     }
 }
+
 ////////// Experience
 section.experience {
     position: relative;
@@ -457,6 +471,7 @@ section.experience {
         }
     }
 }
+
 ////////// Pre-footer
 section.pre-footer {
     height: 61.5rem;
@@ -551,6 +566,7 @@ section.footer {
         margin-top: 1rem;
     }
 }
+
 ///////////Media queries
 @media only screen and (max-width: $xl) {
     section.pre-footer {
@@ -598,7 +614,7 @@ section.footer {
     }
 }
 
-////////Menu
+//////// Menu
 .hamburger {
     display: none;
 }
@@ -606,6 +622,7 @@ section.footer {
 .menu ul a {
     display: block;
 }
+
 @media only screen and (max-width: $small) {
     .hamburger {
         display: block;
