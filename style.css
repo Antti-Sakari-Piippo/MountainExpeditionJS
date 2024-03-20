@@ -29,6 +29,7 @@ h4 {
 
 h1 {
   text-align: center;
+  letter-spacing: -2px;
 }
 
 section {
@@ -45,7 +46,7 @@ section {
 
 h2 {
   color: hsl(337, 15%, 48%);
-  font-size: 5.625rem;
+  font-size: 4.625rem;
   text-align: center;
 }
 
@@ -192,7 +193,7 @@ button:active {
 .flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem 7vw;
+  gap: 4rem max(2rem, 8vw);
 }
 
 .full-width-img {
@@ -365,7 +366,7 @@ section.subscribe .subscribe__holder h2 {
   margin-bottom: 1.5rem;
 }
 section.subscribe .subscribe__holder h4 {
-  max-width: 45ch;
+  max-width: 55ch;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.5rem;
@@ -381,6 +382,9 @@ section.book-trip {
 }
 section.book-trip h2:not(.italic) {
   margin-bottom: -0.4rem;
+}
+section.book-trip h2.italic {
+  margin-bottom: 3rem;
 }
 section.book-trip .flex {
   justify-content: center;

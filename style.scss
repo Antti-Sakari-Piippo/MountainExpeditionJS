@@ -65,6 +65,7 @@ h4 {
 
 h1 {
     text-align: center;
+    letter-spacing: -2px;
 }
 section {
     margin: $space-500 auto;
@@ -79,7 +80,7 @@ section {
 
 h2 {
     color: $clr-secondary-strong;
-    font-size: 5.625rem;
+    font-size: 4.625rem;
     text-align: center;
 }
 
@@ -223,7 +224,7 @@ button:active {
 .flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem 7vw;
+    gap: 4rem max(2rem, 8vw);
 }
 
 .full-width-img {
@@ -402,9 +403,10 @@ section.subscribe {
         h2 {
             color: white;
             margin-bottom: $space-200;
+            // font-size: ;
         }
         h4 {
-            max-width: 45ch;
+            max-width: 55ch;
             margin-left: auto;
             margin-right: auto;
             font-size: 1.5rem;
@@ -422,6 +424,9 @@ section.book-trip {
     justify-content: center;
     h2:not(.italic) {
         margin-bottom: -0.4rem;
+    }
+    h2.italic {
+        margin-bottom: $space-400;
     }
     .flex {
         justify-content: center;
