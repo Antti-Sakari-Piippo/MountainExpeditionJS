@@ -55,7 +55,7 @@ img {
 // Texts
 .italic {
     font-family: $italic;
-    margin-bottom: $space-300;
+    margin-block-end: $space-300;
 }
 h2,
 h3,
@@ -104,7 +104,7 @@ h2.italic {
 
 h4 {
     color: white;
-    margin-bottom: $space-200;
+    margin-block-end: $space-200;
     font-size: 2.2rem;
     text-align: center;
     font-weight: 200;
@@ -124,8 +124,8 @@ p {
     position: absolute;
     font-size: 0.8rem;
     color: white;
-    padding-left: $space-100;
-    padding-top: $space-100;
+    padding-inline-start: $space-100;
+    padding-block-start: $space-100;
 }
 
 p,
@@ -149,7 +149,7 @@ a:before {
     background: $clr-secondary;
     display: block;
     position: absolute;
-    bottom: -3px;
+    inset-block-end: -3px;
     left: 0;
     width: 0;
     height: 3px;
@@ -181,7 +181,7 @@ button:not(.hamburger):focus {
     padding: 0.75em 1.4em;
     color: white;
     display: inline-block;
-    margin-top: $space-200;
+    margin-block-start: $space-200;
     transition-duration: 0.15s;
 }
 
@@ -254,10 +254,10 @@ section.hero {
     .nav-container nav {
         position: absolute;
         width: 100%;
-        margin-top: $space-300;
+        margin-block-start: $space-300;
         z-index: 10000;
         ul {
-            margin-right: $space-400;
+            margin-inline-end: $space-400;
             display: flex;
             justify-content: right;
             gap: $space-400;
@@ -289,7 +289,7 @@ section.hero {
             position: absolute;
             color: white;
             font-size: 9vw;
-            top: 37%;
+            inset-block-start: 37%;
             width: 100%;
             height: 100%;
             text-align: center;
@@ -326,8 +326,8 @@ section.exploration {
     width: 100%;
     gap: 5rem 5vw;
     text-align: center;
-    margin-bottom: $space-500;
-    margin-top: 0;
+    margin-block-end: $space-500;
+    margin-block-start: 0;
     padding-inline: $space-300;
     img {
         scale: 0.9;
@@ -338,17 +338,17 @@ section.exploration {
         text-align: center;
         h3 {
             margin: auto;
-            margin-bottom: -1rem;
+            margin-block-end: -1rem;
         }
         h4.italic {
             margin: auto;
             color: $clr-third-strong;
-            margin-bottom: $space-200;
+            margin-block-end: $space-200;
             font-size: 2.7rem;
         }
         p {
             margin: auto;
-            margin-bottom: $space-300;
+            margin-block-end: $space-300;
             max-width: 45ch;
         }
         button {
@@ -368,13 +368,13 @@ section.offerings {
             color: $clr-secondary-strong;
         }
         img {
-            margin-bottom: $space-300;
+            margin-block-end: $space-300;
             margin-inline: auto;
         }
         p {
             color: $clr-secondary-strong;
             max-width: 23ch;
-            margin-bottom: $space-200;
+            margin-block-end: $space-200;
         }
         a {
             color: $clr-third-strong;
@@ -392,7 +392,7 @@ section.subscribe {
     height: 65rem;
     width: 100%;
     background-size: cover;
-    padding-top: 7rem;
+    padding-block-start: 7rem;
     background-position: center top;
     background-repeat: no-repeat;
     padding-inline: $space-100;
@@ -402,13 +402,13 @@ section.subscribe {
         height: 100%;
         h2 {
             color: white;
-            margin-bottom: $space-200;
+            margin-block-end: $space-200;
             // font-size: ;
         }
         h4 {
             max-width: 55ch;
-            margin-left: auto;
-            margin-right: auto;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
             font-size: 1.5rem;
         }
         .buttons {
@@ -423,10 +423,10 @@ section.book-trip {
     margin: auto;
     justify-content: center;
     h2:not(.italic) {
-        margin-bottom: -0.4rem;
+        margin-block-end: -0.4rem;
     }
     h2.italic {
-        margin-bottom: $space-400;
+        margin-block-end: $space-400;
     }
     .flex {
         justify-content: center;
@@ -458,17 +458,17 @@ section.experience {
         text-align: center;
         h3 {
             margin: auto;
-            margin-bottom: -0.7rem;
+            margin-block-end: -0.7rem;
         }
         h4.italic {
             margin: auto;
             color: $clr-third-strong;
-            margin-bottom: $space-200;
+            margin-block-end: $space-200;
             font-size: 2.7rem;
         }
         p {
             margin: auto;
-            margin-bottom: $space-300;
+            margin-block-end: $space-300;
             max-width: 45ch;
         }
         button {
@@ -486,14 +486,14 @@ section.pre-footer {
     background-color: #7070ff;
     background-image: url(images/pexels-drift-shutterbug-2085998.webp);
     background-blend-mode: multiply;
-    margin-bottom: 0;
+    margin-block-end: 0;
 }
 
 ////////// Footer
 section.footer {
     background-color: $clg-footer;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
     .footer-inner-container {
         max-width: $footer-container;
         margin-inline: auto;
@@ -515,7 +515,7 @@ section.footer {
         color: rgb(210, 210, 210);
     }
     h3 {
-        margin-bottom: 1.3rem;
+        margin-block-end: 1.3rem;
     }
     h4 {
         font-size: 1.4rem;
@@ -525,15 +525,15 @@ section.footer {
         font-size: 1rem;
     }
     .legal p {
-        margin-bottom: 0.3rem;
+        margin-block-end: 0.3rem;
     }
     .social a,
     .social p {
-        margin-bottom: 0.3rem;
+        margin-block-end: 0.3rem;
     }
     .navigate p,
     .navigate a {
-        margin-bottom: 0.7rem;
+        margin-block-end: 0.7rem;
     }
     .company-name {
         font-size: 2.4rem;
@@ -548,7 +548,7 @@ section.footer {
         width: fit-content;
     }
     .flex-item.social {
-        margin-top: 1rem;
+        margin-block-start: 1rem;
         .footer__container__item {
             .social-icon {
                 width: 1.7em;
@@ -560,7 +560,7 @@ section.footer {
             }
             p,
             a {
-                margin-top: 0.4rem;
+                margin-block-start: 0.4rem;
                 &:hover {
                     color: rgb(210, 210, 210);
                 }
@@ -568,7 +568,7 @@ section.footer {
         }
     }
     .flex-item.navigate {
-        margin-top: 1rem;
+        margin-block-start: 1rem;
     }
 }
 
@@ -588,7 +588,7 @@ section.footer {
         background-position: center;
     }
     section.experience .experience__texts {
-        margin-top: 0;
+        margin-block-start: 0;
     }
 }
 
@@ -637,7 +637,7 @@ section.footer {
         color: white;
         border: none;
         z-index: 99999;
-        margin-top: 2rem;
+        margin-block-start: 2rem;
         font-size: 3.5rem;
     }
     .menu {
@@ -657,7 +657,7 @@ section.footer {
         right: -3rem;
         padding: 3rem;
         border-radius: 0 0.5rem 0 0.5rem;
-        padding-top: 9rem;
+        padding-block-start: 9rem;
         backdrop-filter: blur(3px);
     }
     body section.footer .footer-inner-container {
