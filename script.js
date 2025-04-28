@@ -1,6 +1,10 @@
 const menuToggle = document.getElementById('hamburger')
 const menu = document.querySelector('.menu')
 
+window.addEventListener('load', function () {
+  window.scrollTo(0, 0)
+})
+
 function toggleMenu() {
   menu.classList.toggle('close')
   const isClose = menu.classList.contains('close')

@@ -66,6 +66,7 @@ h4 {
 h1 {
     text-align: center;
     letter-spacing: -2px;
+    pointer-events: none;
 }
 section {
     margin: $space-500 auto;
@@ -74,6 +75,7 @@ section {
 .section-container {
     max-width: $section-container;
 }
+
 .copyright {
     font-size: 0.8rem;
 }
@@ -280,6 +282,8 @@ section.hero {
         position: relative;
         background-image: url(images/pexels-pixabay-417173.webp);
         height: calc(32rem + 40vw);
+        max-height: 105vh;
+        max-height: 105dvh;
         width: 100%;
         display: flex;
         background-size: cover;
@@ -327,7 +331,7 @@ section.exploration {
     gap: 5rem 5vw;
     text-align: center;
     margin-block-end: $space-500;
-    margin-block-start: 0;
+    margin-block-start: $space-400;
     padding-inline: $space-300;
     img {
         scale: 0.9;
@@ -648,14 +652,15 @@ section.footer {
         display: inline-block;
     }
     .menu ul {
+        $space: 3rem;
         display: flex;
         flex-direction: column;
         text-align: right;
         background-color: rgba($color: #81cdfe, $alpha: 0.9);
         position: absolute;
-        top: -3rem;
-        right: -3rem;
-        padding: 3rem;
+        top: -$space;
+        right: -$space;
+        padding: $space;
         border-radius: 0 0.5rem 0 0.5rem;
         padding-block-start: 9rem;
         backdrop-filter: blur(3px);
