@@ -1,4 +1,4 @@
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,7 +28,7 @@ $space-400: 3rem;
 $space-500-vw: 3.5vw;
 $space-500: 10rem;
 
-// content size
+// Content size
 $section-container: 95rem;
 $footer-container: 120rem;
 $elem-size: min(27rem, 86%);
@@ -576,7 +576,7 @@ section.footer {
     }
 }
 
-///////////Media queries
+///////// Media queries
 @media only screen and (max-width: $xl) {
     section.pre-footer {
         block-size: 55.25rem;
