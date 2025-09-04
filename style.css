@@ -12,7 +12,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-inline-size: 100%;
   display: block;
 }
 
@@ -201,8 +201,8 @@ button:active {
   position: relative;
 }
 .full-width-img img {
-  height: 45rem;
-  width: 100%;
+  block-size: 45rem;
+  inline-size: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -224,7 +224,7 @@ section.hero {
 }
 section.hero .nav-container nav {
   position: absolute;
-  width: 100%;
+  inline-size: 100%;
   margin-block-start: 2.5rem;
   z-index: 10000;
 }
@@ -247,10 +247,10 @@ section.hero .nav-container nav ul li a:hover {
 section.hero .hero__bg {
   position: relative;
   background-image: url(images/pexels-pixabay-417173.webp);
-  height: calc(32rem + 40vw);
-  max-height: 105vh;
-  max-height: 105dvh;
-  width: 100%;
+  block-size: calc(32rem + 40vw);
+  max-block-size: 105vh;
+  max-block-size: 105dvh;
+  inline-size: 100%;
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
@@ -261,8 +261,8 @@ section.hero .hero__bg h1 {
   color: white;
   font-size: 9vw;
   inset-block-start: 37%;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   text-align: center;
 }
 section.hero .nav {
@@ -289,7 +289,7 @@ section.exploration {
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(min(27rem, 86%), 1fr));
   grid-auto-flow: dense;
-  width: 100%;
+  inline-size: 100%;
   gap: 5rem 5vw;
   text-align: center;
   margin-block-end: 10rem;
@@ -301,7 +301,7 @@ section.exploration img {
 }
 section.exploration .card {
   display: grid;
-  max-width: 630px;
+  max-inline-size: 630px;
   text-align: center;
 }
 section.exploration .card h3 {
@@ -351,8 +351,8 @@ section.offerings .flex-item a:hover {
 section.subscribe {
   background-image: url(images/pexels-federico-tomasoni-11855042.webp);
   position: relative;
-  height: 65rem;
-  width: 100%;
+  block-size: 65rem;
+  inline-size: 100%;
   background-size: cover;
   padding-block-start: 7rem;
   background-position: center top;
@@ -362,7 +362,7 @@ section.subscribe {
 section.subscribe .subscribe__holder {
   display: grid;
   place-content: center;
-  height: 100%;
+  block-size: 100%;
 }
 section.subscribe .subscribe__holder h2 {
   color: white;
@@ -414,7 +414,7 @@ section.experience {
 }
 section.experience .card {
   display: grid;
-  max-width: 630px;
+  max-inline-size: 630px;
   text-align: center;
 }
 section.experience .card h3 {
@@ -437,8 +437,8 @@ section.experience .card button {
 }
 
 section.pre-footer {
-  height: 61.5rem;
-  width: 100%;
+  block-size: 61.5rem;
+  inline-size: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #7070ff;
@@ -453,7 +453,7 @@ section.footer {
   margin-block-start: 0;
 }
 section.footer .footer-inner-container {
-  max-width: 120rem;
+  max-inline-size: 120rem;
   margin-inline: auto;
   padding: 3.5vw;
   display: grid;
@@ -503,15 +503,15 @@ section.footer .footer__container__item.flex {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.7rem;
-  width: -moz-fit-content;
-  width: fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
 }
 section.footer .flex-item.social {
   margin-block-start: 1rem;
 }
 section.footer .flex-item.social .footer__container__item .social-icon {
-  width: 1.7em;
-  height: 1.7em;
+  inline-size: 1.7em;
+  block-size: 1.7em;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -532,7 +532,7 @@ section.footer .flex-item.navigate {
 
 @media only screen and (max-width: 145.125em) {
   section.pre-footer {
-    height: 55.25rem;
+    block-size: 55.25rem;
     background-position: 0;
   }
 }
